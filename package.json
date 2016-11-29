@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run public && npm run build-client && npm run build-server",
-    "build-server": "babel-node server/",
+    "build-server": "babel-node --presets es2015 server/",
     "public": "mkdir -p public && cp client/index.html public/ && cp client/app.css public/",
     "build-client": "browserify client/app.js -o public/bundle.js -t [ babelify --presets [ es2015 ] ]",
     "test": "echo \"Error: no test specified\" && exit 1"
