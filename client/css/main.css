@@ -1,0 +1,22 @@
+@import 'app.css';
+
+div.top-bar{
+  background-color: #8B0913;
+}
+.menu > li > a{
+  background-color: #8B0913;
+  color: #fff;
+}
+.menu > li > a:hover{
+  color: #f7f0cc;
+}
+div.top-bar-left h3{
+  color: #fff;
+}
+.calendario{
+  margin: 1em 0.5em;
+}
+.btns-container{
+  display: flex;
+  
+}
