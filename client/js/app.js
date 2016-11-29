@@ -109,8 +109,8 @@ $(function(){
 
 
 function initForm(){
-  $('#start-date, #titulo').val('');
-  $('#start-date').datepicker({
+  $('#start-date, #titulo, #end-date').val('');
+  $('#start-date, #end-date').datepicker({
     dateFormat: "yy-mm-dd"
   });
   $('.timepicker').timepicker({
@@ -126,9 +126,9 @@ function initForm(){
   });
   $('#allDay').on('change', function(){
     if (this.checked) {
-      $('.timepicker').attr("disabled", "disabled")
+      $('.timepicker, #end-date').attr("disabled", "disabled")
     }else {
-      $('.timepicker').removeAttr("disabled")
+      $('.timepicker, #end-date').removeAttr("disabled")
     }
   })
 

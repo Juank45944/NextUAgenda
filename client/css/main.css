@@ -43,7 +43,7 @@ div.top-bar-left h3{
 }
 
 .add-btn{
-  height: 50%;
+  height: 70%;
   padding: 0.5em;
   display: flex;
   justify-content: center;
@@ -77,7 +77,7 @@ label{
   width: 90%;
 }
 .delete-btn img{
-  width: 50px;
+
   height: 60px;
 }
 table{
