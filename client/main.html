@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.1/fullcalendar.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.1/fullcalendar.print.css">
+    <title>Agenda</title>
     <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/fullcalendar.print.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -23,13 +25,48 @@
       </div>
     </div>
 
-    <div class="expanded-row">
-      <div class="large-9 columns">
+    <div class="expanded-row main-container">
+      <div class="left-cont">
         <div class="calendario"></div>
       </div>
-      <div class="columns btns-container">
-        <div class="add-btn"></div>
-        <div class="delete-btn"></div>
+      <div class="right-cont">
+        <div class="add-btn">
+          <h5>Nuevo Evento</h5>
+          <form>
+            <div class="row">
+              <div class="small-12 columns">
+                <label>Título del evento
+                  <input type="text" id="titulo">
+                </label>
+              </div>
+              <div class="small-8 columns">
+                <label>fecha
+                  <input type="text" id="start-date">
+                </label>
+              </div>
+              <fieldset class="large-4 columns" id="dia-set">
+                <input id="allDay" type="checkbox"><label for="allDay">Día entero</label>
+              </fieldset>
+              <div class="small-6 columns">
+                <label>Hora de inicio
+                  <input type="text" class="timepicker">
+                </label>
+              </div>
+              <div class="small-6 columns">
+                <label>Hora fin
+                  <input type="text" class="timepicker">
+                </label>
+              </div>
+              <div class="small-12 columns btn-cont-enviar">
+                <button type="button" class="success button">Añadir</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="delete-btn">
+          <h6>Arrastra aquí un evento que desees eliminar</h6>
+          <img src="img/trash.png" alt="Eliminar">
+        </div>
       </div>
     </div>
 
@@ -39,7 +76,8 @@
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.min.js"></script>
     <script src="http://momentjs.com/downloads/moment.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.1/fullcalendar.min.js"></script>
+    <script src="js/vendor/fullcalendar.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
