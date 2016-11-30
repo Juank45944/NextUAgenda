@@ -99,11 +99,7 @@ $(function(){
       $('.delete-btn').find('img').attr('src', "img/trash.png");
       $('.delete-btn').css('background-color', '#8B0913')
     },
-
-
   })
-
-
 });
 
 
