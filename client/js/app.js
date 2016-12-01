@@ -95,7 +95,24 @@ class EventsManager {
         success: (data) =>{
           if (data.msg=="OK") {
             alert('Se ha añadido el evento exitosamente')
-            location.reload()
+            if (document.getElementById('allDay').checked) {
+              $('.calendario').fullCalendar('renderEvent', {
+                title: $('#titulo').val(),
+                start: $('#start_date').val(),
+                allDay: true
+              })
+            }else {
+              $('.calendario').fullCalendar('renderEvent', {
+                title: $('#titulo').val(),
+                start: $('#start_date').val()+" "+$('#start_hour').val(),
+                allDay: false,
+                end: $('#end_date').val()+" "+$('#end_hour').val()
+              })
+            }
+
+
+
+
           }else {
             alert(data.msg)
           }
@@ -197,7 +214,7 @@ function initForm(){
     dateFormat: "yy-mm-dd"
   });
   $('.timepicker').timepicker({
-    timeFormat: 'H:mm',
+    timeFormat: 'HH:mm',
     interval: 30,
     minTime: '5',
     maxTime: '23:30',
@@ -214,5 +231,5 @@ function initForm(){
       $('.timepicker, #end_date').removeAttr("disabled")
     }
   })
-  
+
 }
